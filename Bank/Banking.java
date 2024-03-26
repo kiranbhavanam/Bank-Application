@@ -7,12 +7,13 @@ public class Banking{
         Account acc1=new Account(2735,"kiran",1000.00);
   
     SavingsAccount s=new SavingsAccount(2736,"achyuth",4000,10);
-    s.showBalance();
-    s.updateInterest();
+    // s.showBalance();
+    // s.updateInterest();
     
-    s.withdraw(2400);
-    s.showBalance();
-    
+    // s.withdraw(2400);
+    // s.showBalance();
+    System.out.println(s);
+    System.out.println(s.toString());
 
 
     

@@ -11,8 +11,11 @@ public class SavingsAccount extends Account{
     }
     public void updateInterest(){
         System.out.println("balance updated according to interest rate.");
-        setBalance(getBalance()+calculateInterest());
+        // setBalance(getBalance()+calculateInterest());
         //showBalance();
+    }
+    public String toString(){
+        return "Employee {"+"name='"+getName()+'\''+", accountNumber "+getAccountNumber()+"}";
     }
 
 }
