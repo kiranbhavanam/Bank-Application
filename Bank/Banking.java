@@ -5,15 +5,12 @@ public class Banking{
     // class without knowing the implementation details of them.
     public static void main(String[] args) {
         Account acc1=new Account(2735,"kiran",1000.00);
+
+        System.out.println(acc1.geTransactionHistory());
+        
   
     SavingsAccount s=new SavingsAccount(2736,"achyuth",4000,10);
-    // s.showBalance();
-    // s.updateInterest();
-    
-    // s.withdraw(2400);
-    // s.showBalance();
-    System.out.println(s);
-    System.out.println(s.toString());
+
 
 
     

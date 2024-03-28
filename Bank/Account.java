@@ -68,4 +68,7 @@ class Transaction{
         this.type=type;
         this.amount=amount;
     }
+    public String toString(){
+        return "{ "+type+amount +" }";
+    }
 }
