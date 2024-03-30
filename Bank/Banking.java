@@ -1,6 +1,7 @@
 package Bank;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class Banking{
     //Abstraction is achieved by utilising the methods of BankAccount
@@ -29,12 +30,33 @@ public class Banking{
                 System.out.println("account does not exist");
             }
         }
+        public void withdrawFromAccount(int accountNumber, double amount){
+            Account acc=Accounts.get(accountNumber);
+            if(acc!=null){
+                acc.withdraw(amount);
+                System.out.println("Withdrawl from : "+accountNumber+" current balance"+acc.getBalance());
+            }
+            else{
+                System.out.println("account does not exist");
+            }
+        }
+        public void displayTransactionList(int accountNumber){
+            Account acc=Accounts.get(accountNumber);
+            if(acc!=null){
+                List<Transaction> res= acc.geTransactionHistory();
+                System.out.println("Transaction history of : "+accountNumber+ " "+res);
+
+            }
+        }
         public static void main(String[] args) {
         Banking rec=new Banking();
         rec.createAccount(1, "kiran", 1000);
         rec.createAccount(2, "achyuth", 20000);
         
         rec.depositToAccout(2, 1000);
+        rec.depositToAccout(2, 100);
+        rec.withdrawFromAccount(2, 500);
+        rec.displayTransactionList(2);
         
   
     // SavingsAccount s=new SavingsAccount(2736,"achyuth",4000,10);
